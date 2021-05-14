@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource click, win;
+	private AudioSource _source;
+	[SerializeField] private AudioClip click, win;
 
-    public void PlayClick()
-    {
-        click.Play();
-    }
+	private void Start()
+	{
+		_source = GetComponent<AudioSource>();
+	}
 
-    public void PlayWin()
-    {
-        win.Play();
-    }
+	public void PlayClick()
+	{
+		_source.PlayOneShot(click);
+	}
+
+	public void PlayWin()
+	{
+		_source.PlayOneShot(win);
+	}
 }

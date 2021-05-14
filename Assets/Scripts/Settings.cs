@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using static Generator;
 
 public class Settings : MonoBehaviour
 {
@@ -18,14 +17,14 @@ public class Settings : MonoBehaviour
         //Регионы
         regionSelect.ClearOptions();
         regionSelect.options.Add(new Dropdown.OptionData {text = "Случайный"});
-        foreach (var region in Region)
-            regionSelect.options.Add(new Dropdown.OptionData {text = $"{region.Key}|{region.Value}"});
+        // foreach (var region in Generator.RussianRegions)
+        //     regionSelect.options.Add(new Dropdown.OptionData {text = $"{region.Key}|{region.Value}"});
         if (!PlayerPrefs.HasKey("region")) PlayerPrefs.SetInt("region", 0);
         regionSelect.value = PlayerPrefs.GetInt("region"); 
         
         //Показывать предыдущие номера
         if (!PlayerPrefs.HasKey("prew")) PlayerPrefs.SetInt("prew", 0);
-        SetPrew();
+        SetPrevious();
         
         //Темная тема
         if (!PlayerPrefs.HasKey("dark")) PlayerPrefs.SetInt("dark", 0); 
@@ -43,7 +42,7 @@ public class Settings : MonoBehaviour
     }
 
     //Отображение предыдущих номеров
-    private void SetPrew()
+    private void SetPrevious()
     {
         if (PlayerPrefs.GetInt("prew") == 0)
         {
@@ -62,7 +61,7 @@ public class Settings : MonoBehaviour
     {
         PlayerPrefs.SetInt("prew", PlayerPrefs.GetInt("prew") == 0 ? 1 : 0);
         PlayerPrefs.Save();
-        SetPrew();
+        SetPrevious();
     }
  
     //Темная тема
@@ -71,7 +70,7 @@ public class Settings : MonoBehaviour
         themeSelect.GetComponentInChildren<Text>().text = dark ? "Тёмная" : "Светлая";
         PlayerPrefs.SetInt("dark", dark ? 1 : 0);
         PlayerPrefs.Save();
-        OnChangeTheme?.Invoke(this, new ChangeThemeEventArgs {darkTheme = dark});
+        OnChangeTheme?.Invoke(this, new ChangeThemeEventArgs {DarkTheme = dark});
     }
     public void ChangeTheme()
     {
@@ -111,6 +110,6 @@ public class Settings : MonoBehaviour
 
     public class ChangeThemeEventArgs : EventArgs
     {
-        public bool darkTheme;
+        public bool DarkTheme;
     }
 }

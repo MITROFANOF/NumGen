@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Text))]
 public class RegPrefab : MonoBehaviour
 {
-    public Text num, nam;
+	public Text regionNumber;
+	public Text regionName;
 
-    public void SetText(string num, string nam)
-    {
-        this.num.text = num;
-        this.nam.text = nam;
-    }
+	public void SetText(string newRegionNumber, string newRegionName)
+	{
+		regionNumber.text = newRegionNumber;
+		regionName.text = newRegionName;
+	}
 }
