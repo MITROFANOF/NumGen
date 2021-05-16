@@ -2,42 +2,24 @@
 using System.Linq;
 using UnityEngine;
 
-public class UkrainianNumberGenerator : INumberGenerator
+public class UkrainianNumberGenerator : NumberGenerator
 {
-	private const string Letters = "ABEIKMHOPCTX";
-	public SortedDictionary<string, string> Regions { get; } = new SortedDictionary<string, string>();
+	protected override string Path => "Sheets/UkrainianRegions";
+	protected override string Letters => "ABEIKMHOPCTX";
 
-	public void LoadAndParseRegionList()
-	{
-		var rawData = Resources.Load<TextAsset>("Sheets/UkrainianRegions");
-		var rowsData = rawData.text.Split('\n').ToList();
-		foreach (var rowPart in rowsData.Select(row => row.Split(';')))
-		{
-			Regions.Add(rowPart[0], rowPart[1]);
-		}
-	}
-
-	public int RandomDigits()
+	protected override int RandomDigits()
 	{
 		return Random.Range(1, 10000);
 	}
 
-	public string RandomRegion()
+	public override Number GenerateNumber()
 	{
-		return Regions.Keys.ElementAt(Random.Range(0, Regions.Count));
-	}
-
-	public string RandomLetter()
-	{
-		return Letters[Random.Range(0, Letters.Length)].ToString();
-	}
-
-	public void GenerateNumber(ref INumber number)
-	{
+		Number number = new UkrainianNumber();
 		number.Digits = RandomDigits();
-		number.Letters = RandomLetter() + RandomLetter();
+		number.Letters = new string(new[] {RandomLetter(), RandomLetter()});
 		number.Region = RandomRegion();
 
 		number.Join();
+		return number;
 	}
 }

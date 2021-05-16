@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,59 +6,47 @@ using static StatsCounter;
 
 public enum GeneratorType
 {
-	Russian,
-	Ukrainian
+	Russian = 0,
+	Ukrainian = 1
 }
 
 public class GameManager : MonoBehaviour
 {
 	public GeneratorType generatorType;
-	[SerializeField] private GameObject numberPlatePrefab;
-	[SerializeField] private GameObject numberUaPlatePrefab;
-	public Transform soloNumParent, multyNumParent;
+	public Transform soloNumParent;
+	public Transform multiNumParent;
 	
 	public Text regionText, infoText, countText;
 	private bool _paused;
 	public UnityEvent winEvent, newNumEvent;
-	private readonly RussianNumberGenerator _russianNumberGenerator = new RussianNumberGenerator();
-	private readonly UkrainianNumberGenerator _ukrainianNumberGenerator = new UkrainianNumberGenerator();
-	
-	private readonly Generator _generators = new Generator(); 
-	
+
+	private static readonly NumberGenerator[] NumberGenerators = {
+		new RussianNumberGenerator(),
+		new UkrainianNumberGenerator(),
+	};
 	
 	private void Start()
 	{
-		UpdateNumCountOnBox();
-		
-		//TODO - Работает только первый лоад.
-		_ukrainianNumberGenerator.LoadAndParseRegionList();
-		_russianNumberGenerator.LoadAndParseRegionList();
+		foreach (var generator in NumberGenerators)
+		{
+			generator.LoadAndParseRegionList();
+		}
+
+		//UpdateNumCountOnBox();
 	}
 
 	public void NewNum()
 	{
-		INumber number;
+		if (_paused) return;
 		
-		switch (generatorType)
-		{
-			case GeneratorType.Russian:
-				var rusNumber = Instantiate(numberPlatePrefab, soloNumParent.transform);
-				number = rusNumber.GetComponent<RussianNumber>();
-				_generators.Generate(_russianNumberGenerator, number);
-				break;
-			case GeneratorType.Ukrainian:
-				var uaNumber = Instantiate(numberUaPlatePrefab, soloNumParent.transform);
-				number = uaNumber.GetComponent<UkrainianNumber>();
-				_generators.Generate(_ukrainianNumberGenerator, number);
-				break;
-			default:
-				throw new ArgumentOutOfRangeException();
-		}
-
-		Debug.Log(number.Number);
-
-		// if (_paused) return;
-		// newNumEvent.Invoke();
+		newNumEvent.Invoke();
+		var number = NumberGenerators[(int) generatorType].GenerateNumber();
+		infoText.text = number.Info;
+		Debug.Log(number.FullNumber);
+		
+		//number.PlateDrawer.DrawNumberPlate(number.FullNumber);
+		// 
+		// 
 		//
 		//
 		// soloNumParent.GetChild(soloNumParent.childCount - 1).GetComponent<Animator>()
@@ -72,7 +59,7 @@ public class GameManager : MonoBehaviour
 		// //AnalyzeNumber(_number);
 		//
 		// //regionText.text = RussianRegions[_number.Region];
-		// infoText.text = _number.Info;
+		//
 		//
 		// newNum.GetComponent<Drawer>().DrawNumberPlate(_number.Number);
 		//

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
-using static Generator;
 
 public class RegsFormat : MonoBehaviour
 {

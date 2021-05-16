@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Drawer : MonoBehaviour
 {
+	public GameObject prefab;
 	[SerializeField] private Image[] symbol = new Image[11];
 
 	[SerializeField] private SpriteAtlas symbolsSpriteAtlas;
@@ -12,7 +13,7 @@ public class Drawer : MonoBehaviour
 	public void DrawNumberPlate(string number)
 	{
 		for (var i = 0; i < number.Length; i++)
-			symbol[i].sprite = symbolsSpriteAtlas.GetSprite(number[i].ToString());
+			symbol[i].sprite = symbolsSpriteAtlas.GetSprite("UA_"+number[i].ToString());
 		
 		for (var i = number.Length; i < 9; i++)
 			symbol[i].sprite = transparent;

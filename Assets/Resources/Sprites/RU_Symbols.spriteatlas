@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RU_Symbols
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 1166652132288391010, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -504846795404632173, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -3757805160953817040, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -4425873619535838693, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: 1099203960692416626, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -3632400078620484949, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -9180552138202639690, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -6759656063899954767, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -2932427819181180213, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -1784107922691212606, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -5680614512305007648, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -4937922905841152393, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -5860014857972054062, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -6044141997481606948, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -6998003370093191619, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -7954661928207178104, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -2463668094074597519, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -1176477082296740272, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: 7556207512580996276, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: 734274049345668311, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: 5042715468690400535, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    - {fileID: -1790756174153444080, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+    totalSpriteSurfaceArea: 761112
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4425873619535838693, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -3757805160953817040, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -2463668094074597519, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -1176477082296740272, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -6998003370093191619, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -7954661928207178104, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -6044141997481606948, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -5680614512305007648, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -5860014857972054062, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -4937922905841152393, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -1790756174153444080, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: 5042715468690400535, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: 734274049345668311, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: 7556207512580996276, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -1784107922691212606, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -2932427819181180213, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -3632400078620484949, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: 1099203960692416626, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -6759656063899954767, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -9180552138202639690, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: -504846795404632173, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  - {fileID: 1166652132288391010, guid: b91a6f352cef5554e9197037813383ec, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - RU_3
+  - RU_2
+  - RU_M
+  - RU_O
+  - RU_H
+  - RU_K
+  - RU_E
+  - RU_A
+  - RU_C
+  - RU_B
+  - RU_Y
+  - RU_X
+  - RU_T
+  - RU_P
+  - RU_9
+  - RU_8
+  - RU_5
+  - RU_4
+  - RU_7
+  - RU_6
+  - RU_1
+  - RU_0
+  m_RenderDataMap: {}
+  m_Tag: RU_Symbols
+  m_IsVariant: 0

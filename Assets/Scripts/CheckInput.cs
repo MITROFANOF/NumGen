@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using static Generator;
 
 public class CheckInput : MonoBehaviour
 {
