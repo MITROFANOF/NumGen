@@ -5,11 +5,11 @@ public class RegsFormat : MonoBehaviour
 {
     [FormerlySerializedAs("RegPrefab")] public GameObject regPrefab;
 
-    private readonly RussianNumberGenerator _russianNumberGenerator = new RussianNumberGenerator();
+    [SerializeField] private NumberSpawner spawner;
     
     private void Start()
     {
-        foreach (var region in _russianNumberGenerator.Regions)
+        foreach (var region in spawner.CurrentGenerator.Regions)
         {
             var newReg = Instantiate(regPrefab, transform);
             newReg.GetComponent<RegPrefab>().SetText(region.Key, region.Value);

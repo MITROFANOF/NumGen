@@ -5116,9 +5116,8 @@ GameObject:
   m_Component:
   - component: {fileID: 51293509}
   - component: {fileID: 51293508}
-  - component: {fileID: 51293510}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: NumberSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5137,12 +5136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorType: 1
-  numberPlatePrefab: {fileID: 93417105767314655, guid: d13f39830d756804598f389162fb8f40,
-    type: 3}
-  numberUaPlatePrefab: {fileID: 93417105767314655, guid: 4399a48ba357c6041963c98981bb6d9c,
-    type: 3}
   soloNumParent: {fileID: 967771996}
-  multyNumParent: {fileID: 1926186297}
+  multiNumParent: {fileID: 1926186297}
   regionText: {fileID: 996779630}
   infoText: {fileID: 670878100}
   countText: {fileID: 1321509321}
@@ -5185,7 +5180,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  newNumEvent:
+  newNumberEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2063332867}
@@ -5250,18 +5245,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &51293510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51293507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b324395f878d94eaf6836150c8895b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &56795801
 GameObject:
   m_ObjectHideFlags: 0
@@ -8805,7 +8788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51293510}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayServices, Assembly-CSharp
         m_MethodName: ShowAchievements
         m_Mode: 1
@@ -20037,6 +20020,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825791537}
   m_CullTransparentMesh: 0
+--- !u!1 &848915124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848915126}
+  - component: {fileID: 848915125}
+  m_Layer: 0
+  m_Name: GooglePlayServices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &848915125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848915124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b324395f878d94eaf6836150c8895b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &848915126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848915124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.020919, y: 5.528596, z: -2389.3503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850832634
 GameObject:
   m_ObjectHideFlags: 0
@@ -29280,8 +29306,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 51293508}
-          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: NewNum
+          m_TargetAssemblyTypeName: NumberSpawner, Assembly-CSharp
+          m_MethodName: SpawnNewNumber
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -30957,7 +30983,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 51293510}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayServices, Assembly-CSharp
         m_MethodName: ShowLeaderboard
         m_Mode: 1
@@ -42901,6 +42927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regPrefab: {fileID: 3689447794405800363, guid: e0fd5940ae3916e42bb0ce2155b22148,
     type: 3}
+  spawner: {fileID: 51293508}
 --- !u!114 &2095644203
 MonoBehaviour:
   m_ObjectHideFlags: 0

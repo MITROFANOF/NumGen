@@ -1,33 +1,34 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Generators;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using static StatsCounter;
 
-public enum GeneratorType
-{
-	Russian = 0,
-	Ukrainian = 1
-}
-
-public class GameManager : MonoBehaviour
+public class NumberSpawner : MonoBehaviour
 {
 	public GeneratorType generatorType;
 	public Transform soloNumParent;
 	public Transform multiNumParent;
-	
+
 	public Text regionText, infoText, countText;
 	private bool _paused;
-	public UnityEvent winEvent, newNumEvent;
+	public UnityEvent winEvent;
+	public UnityEvent newNumberEvent;
 
-	private static readonly NumberGenerator[] NumberGenerators = {
+	private readonly List<NumberGenerator> _numberGenerators = new List<NumberGenerator>
+	{
 		new RussianNumberGenerator(),
 		new UkrainianNumberGenerator(),
 	};
-	
+
+	public NumberGenerator CurrentGenerator;
+
 	private void Start()
 	{
-		foreach (var generator in NumberGenerators)
+		foreach (var generator in _numberGenerators)
 		{
 			generator.LoadAndParseRegionList();
 		}
@@ -35,15 +36,21 @@ public class GameManager : MonoBehaviour
 		//UpdateNumCountOnBox();
 	}
 
-	public void NewNum()
+	public void SpawnNewNumber()
 	{
 		if (_paused) return;
-		
-		newNumEvent.Invoke();
-		var number = NumberGenerators[(int) generatorType].GenerateNumber();
-		infoText.text = number.Info;
-		Debug.Log(number.FullNumber);
-		
+
+		newNumberEvent.Invoke();
+
+		foreach (var generator in _numberGenerators.Where(generator => generator.Type == generatorType))
+		{
+			CurrentGenerator = generator;
+		}
+
+		var newNumber = CurrentGenerator.GenerateNumber();
+		Debug.Log(newNumber.FullNumber);
+
+
 		//number.PlateDrawer.DrawNumberPlate(number.FullNumber);
 		// 
 		// 

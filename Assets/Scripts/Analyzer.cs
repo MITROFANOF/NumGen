@@ -1,6 +1,6 @@
 ﻿public static class Analyzer
 {
-	public static void AnalyzeNumber(RussianNumber number)
+	public static void AnalyzeNumber(Number number)
 	{
 		number.ClearData();
 
@@ -9,7 +9,7 @@
 		switch (region)
 		{
 			case 2:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "PKC":
 					case "KKC":
@@ -72,7 +72,7 @@
 
 				break;
 			case 4:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "CCC":
 						number.AddData(2, "Судьи\n");
@@ -99,7 +99,7 @@
 
 				break;
 			case 8:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "CCC":
 						number.AddData(2, "Прокуратура Республики Калмыкия, судьи\n");
@@ -117,7 +117,7 @@
 
 				break;
 			case 10:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "TTT":
 						number.AddData(2, "Правительство республики, ФСБ республики, есть и у частников\n");
@@ -148,7 +148,7 @@
 
 				break;
 			case 11:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "BAT":
 						number.AddData(2,
@@ -185,7 +185,7 @@
 
 				break;
 			case 14:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MMM":
 						number.AddData(2, "Серия автомобилей МВД\n");
@@ -213,7 +213,7 @@
 
 				break;
 			case 16:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MMM":
 					case "BMM":
@@ -250,7 +250,7 @@
 
 				break;
 			case 18:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2, "Администрация Удмуртской Республики\n");
@@ -263,7 +263,7 @@
 
 				break;
 			case 22:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 					case "TTT":
@@ -306,7 +306,7 @@
 
 				break;
 			case 23:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "PPP":
 						number.AddData(2, "Администрации Краснодарского края и городов, частники\n");
@@ -361,7 +361,7 @@
 
 				break;
 			case 24:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "KPK":
 					case "OOO":
@@ -388,7 +388,7 @@
 
 				break;
 			case 25:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MOO":
 						number.AddData(2, "Краевые структуры УВД, МЧС, пожарные и другие спецслужбы\n");
@@ -436,7 +436,7 @@
 
 				break;
 			case 29:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "PPP":
 						number.AddData(2, "Администрация Архангельской области с 2007 года\n");
@@ -457,7 +457,7 @@
 
 				break;
 			case 31:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2,
@@ -485,7 +485,7 @@
 
 				break;
 			case 33:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "ABO":
 					case "AAA":
@@ -502,7 +502,7 @@
 
 				break;
 			case 35:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						if (number.Digits == 1)
@@ -535,7 +535,7 @@
 
 				break;
 			case 36:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2, "Администрация Воронежской области\n");
@@ -569,7 +569,7 @@
 
 				break;
 			case 39:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAK":
 						number.AddData(2, "Администрация Калининградской области, УФСБ, прокуратура\n");
@@ -600,7 +600,7 @@
 
 				break;
 			case 40:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MAA":
 						number.AddData(2,
@@ -633,7 +633,7 @@
 
 				break;
 			case 42:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AKO":
 						number.AddData(2, "Ранее администрация Кемеровской области\n");
@@ -661,7 +661,7 @@
 
 				break;
 			case 43:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AKO":
 						number.AddData(2, "Администрация Кировской области\n");
@@ -682,7 +682,7 @@
 
 				break;
 			case 45:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "OOO":
 						number.AddData(2, "Бывшая серия администрации Курганской области\n");
@@ -700,7 +700,7 @@
 
 				break;
 			case 47:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "OKO":
 						if (number.Digits == 20) number.AddData(5, "Прокуратура ЛО\n");
@@ -732,7 +732,7 @@
 
 				break;
 			case 52:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2, "Администрация Нижегородской области\n");
@@ -769,7 +769,7 @@
 
 				break;
 			case 53:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MMM":
 						if (number.Digits <= 100)
@@ -785,7 +785,7 @@
 
 				break;
 			case 54:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2, "Полномочные представители Президента РФ\n");
@@ -805,7 +805,7 @@
 
 				break;
 			case 57:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AOO":
 						number.AddData(2, "Администрация Орловской области\n");
@@ -823,7 +823,7 @@
 
 				break;
 			case 61:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "APO":
 						number.AddData(2, "Администрация Ростовской области\n");
@@ -844,10 +844,10 @@
 
 				break;
 			case 64:
-				if (number.Letters[0] == 'T' && number.Digits == 64)
+				if (number.Series[0] == 'T' && number.Digits == 64)
 					number.AddData(3, "Городская Дума Саратовской области\n");
 				else
-					switch (number.Letters)
+					switch (number.Series)
 					{
 						case "OBB":
 							if (number.Digits < 200) number.AddData(3, "Правительство Саратовской области\n");
@@ -862,7 +862,7 @@
 
 				break;
 			case 69:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "ATB":
 						number.AddData(2, "Администрация города Твери\n");
@@ -880,7 +880,7 @@
 
 				break;
 			case 70:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "OTO":
 						number.AddData(2, "Администрация Томской области\n");
@@ -892,7 +892,7 @@
 
 				break;
 			case 77:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "XKX":
 						number.AddData(2, "Частично ФСБ Москвы\n");
@@ -943,7 +943,7 @@
 
 				break;
 			case 78:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AAA":
 						number.AddData(2, "Органы исполнительной власти СПб\n");
@@ -1016,7 +1016,7 @@
 
 				break;
 			case 93:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "OOO":
 					case "AAA":
@@ -1056,7 +1056,7 @@
 
 				break;
 			case 97:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "EKX":
 						number.AddData(2, "ФСО Москвы\n");
@@ -1805,7 +1805,7 @@
 
 				break;
 			case 98:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "OOO":
 					case "AAA":
@@ -1876,7 +1876,7 @@
 
 				break;
 			case 99:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "EKX":
 						number.AddData(2, "Автомобили ФСО, серия пришла на смену ЕКХ77\n");
@@ -1895,7 +1895,7 @@
 
 				break;
 			case 102:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "CKC":
 						number.AddData(2,
@@ -1912,7 +1912,7 @@
 
 				break;
 			case 116:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "BOB":
 						number.AddData(2, "Серия автомобилей участников Великой Отечественной Войны\n");
@@ -1921,7 +1921,7 @@
 
 				break;
 			case 125:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "EEE":
 						number.AddData(2, "ФСБ\n");
@@ -1961,7 +1961,7 @@
 
 				break;
 			case 159:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "MMM":
 						number.AddData(2, "МВД\n");
@@ -1970,7 +1970,7 @@
 
 				break;
 			case 164:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "ACA":
 						number.AddData(2, "Правительство Саратовской области\n");
@@ -1982,7 +1982,7 @@
 
 				break;
 			case 177:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "AKP":
 					case "BKP":
@@ -1997,7 +1997,7 @@
 
 				break;
 			case 178:
-				switch (number.Letters)
+				switch (number.Series)
 				{
 					case "HBB":
 						number.AddData(2, "Администрация СПб\n");
@@ -2007,7 +2007,7 @@
 				break;
 		}
 
-		if (number.Rang == 0 && number.Letters[0] == number.Letters[1] && number.Letters[0] == number.Letters[2])
+		if (number.Rang == 0 && number.Series[0] == number.Series[1] && number.Series[0] == number.Series[2])
 			number.AddData(1, "Одинаковые буквы\n");
 		if (number.Digits == 0) number.AddData(0, "Неверный номер\n");
 		if (number.Digits % 111 == 0) number.AddData(1, "Одинаковые цифры\n");

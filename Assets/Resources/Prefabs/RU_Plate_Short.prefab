@@ -141,9 +141,6 @@ MonoBehaviour:
   - {fileID: 21948265457128181}
   - {fileID: 21948264918386801}
   - {fileID: 21948266101245880}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   symbolsSpriteAtlas: {fileID: 4343727234628468602, guid: 7a20b08382e4efa46b11d981bb0401f9,
     type: 2}
   transparent: {fileID: 21300000, guid: aac196aa3156b844399764d967b74a0e, type: 3}

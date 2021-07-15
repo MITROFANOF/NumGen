@@ -6,7 +6,7 @@ public class CheckInput : MonoBehaviour
 	public CanvasGroup numbers, letters;
 	public Drawer drawer;
 	public Text info;
-	public RussianNumber russianNumber;
+	public Number russianNumber;
 	private string _number = "";
 
 	public void Buttons(string a)
@@ -58,7 +58,6 @@ public class CheckInput : MonoBehaviour
 		else
 		{
 			russianNumber.ClearData();
-			russianNumber.Separate();
 			if (0 < russianNumber.Digits)
 			{
 				//if (RussianRegions.ContainsKey(russianNumber.Region))
