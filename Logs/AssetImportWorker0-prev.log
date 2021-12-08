@@ -1,10 +1,10 @@
 Using pre-set license
-Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
+Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
 OS: 'Windows 10 Pro; OS build 19042.867; Version 2009; 64bit' Language: 'en' Physical Memory: 16320 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
- COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+COMMAND LINE ARGUMENTS:
+A:\Program Files\Unity\2020.3.20f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,14 @@ C:/Users/vanyo/Documents/GitHub/NumGen
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65314
+52452
 Successfully changed project path to: C:/Users/vanyo/Documents/GitHub/NumGen
 C:/Users/vanyo/Documents/GitHub/NumGen
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 58.47 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2020.3.20f1 (41c4e627c95f)
+[Subsystems] Discovering subsystems at path A:/Program Files/Unity/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/vanyo/Documents/GitHub/NumGen/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
@@ -30,30 +30,56 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
     Vendor:   
     VRAM:     8079 MB
-    Driver:   27.21.14.6259
+    Driver:   30.0.14.9649
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56916
+Mono path[0] = 'A:/Program Files/Unity/2020.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'A:/Program Files/Unity/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'A:/Program Files/Unity/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56080
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001913 seconds.
+Register platform support module: A:/Program Files/Unity/2020.3.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: A:/Program Files/Unity/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001310 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 29.61 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 32.81 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.647 seconds
+- Completed reload, in  2.232 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2232ms)
+		BeginReloadAssembly (64ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (446ms)
+			LoadAssemblies (64ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (183ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (157ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (33ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (81ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002842 seconds.
+Registered in 0.002861 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 GPGSUpgrader start
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -77,293 +103,231 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 (Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
 
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.842 seconds
+- Completed reload, in  0.903 seconds
+Domain Reload Profiling:
+	ReloadAssembly (903ms)
+		BeginReloadAssembly (159ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (687ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (217ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (253ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (153ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 902 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 49.5 MB.
-System memory in use after: 49.5 MB.
+Unloading 919 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 49.9 MB.
+System memory in use after: 50.0 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 1292.
-Total: 3.684000 ms (FindLiveObjects: 0.218200 ms CreateObjectMapping: 0.103700 ms MarkObjects: 3.248500 ms  DeleteObjects: 0.111900 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 1305.
+Total: 2.102300 ms (FindLiveObjects: 0.095200 ms CreateObjectMapping: 0.027600 ms MarkObjects: 1.911300 ms  DeleteObjects: 0.067300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/123.asset
+  artifactKey: Guid(fde5b9ed86382674497ccaf381e1e673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/123.asset using Guid(fde5b9ed86382674497ccaf381e1e673) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 'Generators.RussianNumberGenerator' is missing the class attribute 'ExtensionOfNativeClass'!
+Fixing reference to the runtime script in scene file!
+'Generators.RussianNumberGenerator' is missing the class attribute 'ExtensionOfNativeClass'!
+ -> (artifact id: '9927b97fbe590bcc5fdac3e7806dbd56') in 0.031165 seconds 
+  Import took 0.032609 seconds .
 
 ========================================================================
 Received Import Request.
-  path: Assets/Resources/Sprites/PlatesAndSymbols.png
-  artifactKey: Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sprites/PlatesAndSymbols.png using Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09ab4d347afdefa6b311dde498db338') in 0.278198 seconds
-  Import took 0.283080 seconds .
+  Time since last request: 0.000176 seconds.
+  path: Assets/1233.asset
+  artifactKey: Guid(10db5e56b3851ee46a351d2c56974207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1233.asset using Guid(10db5e56b3851ee46a351d2c56974207) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 'Generators.UkrainianNumberGenerator' is missing the class attribute 'ExtensionOfNativeClass'!
+Fixing reference to the runtime script in scene file!
+'Generators.UkrainianNumberGenerator' is missing the class attribute 'ExtensionOfNativeClass'!
+ -> (artifact id: '61ea833e5bc36d4411afb9a7fb74e6b8') in 0.009051 seconds 
+  Import took 0.010325 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 72.921306 seconds.
-  path: Assets/Resources/Sprites/PlatesAndSymbols.png
-  artifactKey: Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sprites/PlatesAndSymbols.png using Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb9644e16d0afe3ba16e93782155b2a') in 0.156147 seconds
-  Import took 0.158934 seconds .
+  Time since last request: 50.114977 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(746948c0a157bb5409a12ee71fcf705f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(746948c0a157bb5409a12ee71fcf705f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a62cb1b287b70c90ddd358ecc86fde3') in 0.008240 seconds 
+  Import took 0.009545 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.083173 seconds.
-  path: Assets/Resources/Sprites/PlatesAndSymbols.png
-  artifactKey: Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sprites/PlatesAndSymbols.png using Guid(b91a6f352cef5554e9197037813383ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb9644e16d0afe3ba16e93782155b2a') in 0.184563 seconds
-  Import took 0.186367 seconds .
+  Time since last request: 2.729797 seconds.
+  path: Assets/Scripts/Generators
+  artifactKey: Guid(e3a4e87e50934507baa353a63be989fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Generators using Guid(e3a4e87e50934507baa353a63be989fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c543fed384a7ada154295433ee30a9') in 0.005521 seconds 
+  Import took 0.006902 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 68.471353 seconds.
-  path: Assets/UaNumber.prefab
-  artifactKey: Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UaNumber.prefab using Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbca18d9affedef6adb67249aa96558') in 0.022980 seconds
-  Import took 0.025367 seconds .
+  Time since last request: 1.034898 seconds.
+  path: Assets/Scripts/Generators/UkrainianNumberGenerator.cs
+  artifactKey: Guid(c04ac4678ece4aa88097059897389416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Generators/UkrainianNumberGenerator.cs using Guid(c04ac4678ece4aa88097059897389416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb94b4a585deecd02a49369d537c6464') in 0.027198 seconds 
+  Import took 0.028824 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.189138 seconds.
-  path: Assets/RusNumber 1.prefab
-  artifactKey: Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumber 1.prefab using Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29235872109afa45e7d726da9327c027') in 0.016798 seconds
-  Import took 0.018930 seconds .
+  Time since last request: 3.204280 seconds.
+  path: Assets/Scripts/Generators/NumberGenerator.cs
+  artifactKey: Guid(2d716967891e43f3ad82590cf0f38e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Generators/NumberGenerator.cs using Guid(2d716967891e43f3ad82590cf0f38e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8246d21e688f603d64ba28580f5c0201') in 0.008887 seconds 
+  Import took 0.011258 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.016337 seconds.
-  path: Assets/RusNumber 1.prefab
-  artifactKey: Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumber 1.prefab using Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29235872109afa45e7d726da9327c027') in 0.006397 seconds
-  Import took 0.008734 seconds .
+  Time since last request: 8.249028 seconds.
+  path: Assets/Resources/Sounds
+  artifactKey: Guid(51aac368867323943a34b3608a5e6efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Sounds using Guid(51aac368867323943a34b3608a5e6efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee92319df1ea723bc39ccf5cac9fec4') in 0.009420 seconds 
+  Import took 0.011593 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.286522 seconds.
-  path: Assets/RusNumberLong.prefab
-  artifactKey: Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong.prefab using Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '108b491db8a29999f6faf2f883774366') in 0.013943 seconds
-  Import took 0.016888 seconds .
+  Time since last request: 0.424827 seconds.
+  path: Assets/Resources/Sprites
+  artifactKey: Guid(03dfe323bc2e29340926bcda2c4d624d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Sprites using Guid(03dfe323bc2e29340926bcda2c4d624d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e83010f008ec9203c586b170e8a16e65') in 0.008474 seconds 
+  Import took 0.011181 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.011686 seconds.
-  path: Assets/RusNumberLong.prefab
-  artifactKey: Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong.prefab using Guid(a62a04f567c8b7a46b5d4ecfcde388de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '108b491db8a29999f6faf2f883774366') in 0.006319 seconds
-  Import took 0.009435 seconds .
+  Time since last request: 3.933191 seconds.
+  path: Assets/NumGen.unity
+  artifactKey: Guid(174e5b78713286444a0d23c2921b3716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NumGen.unity using Guid(174e5b78713286444a0d23c2921b3716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a84108ab81113576fc8edb025cff0ac') in 0.018607 seconds 
+  Import took 0.020545 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 248.110713 seconds.
-  path: Assets/A07FF8DB.jpg
-  artifactKey: Guid(2bc871b38dc11dc43a0956cbded5ef49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/A07FF8DB.jpg using Guid(2bc871b38dc11dc43a0956cbded5ef49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ecb2bb5c33f308e984b746c535ca97f') in 0.028763 seconds
-  Import took 0.031399 seconds .
+  Time since last request: 47.940451 seconds.
+  path: Assets/LICENSE.txt
+  artifactKey: Guid(8de05350213724a62b915f22222ede83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LICENSE.txt using Guid(8de05350213724a62b915f22222ede83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997cfa9e799defc5c0d96ee5a5c32474') in 0.014126 seconds 
+  Import took 0.016090 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 337.706520 seconds.
-  path: Assets/RusNumberShort.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberShort.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef82dba460d598214994c157f3642b8') in 0.012833 seconds
-  Import took 0.015028 seconds .
+  Time since last request: 0.892749 seconds.
+  path: Assets/PlayServices.cs
+  artifactKey: Guid(61b324395f878d94eaf6836150c8895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayServices.cs using Guid(61b324395f878d94eaf6836150c8895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7afbd592557a78ffb56c49421b8c66') in 0.006063 seconds 
+  Import took 0.007625 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.015103 seconds.
-  path: Assets/RusNumberShort.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberShort.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef82dba460d598214994c157f3642b8') in 0.007678 seconds
-  Import took 0.009692 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002600 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GPGSUpgrader start
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:38)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-========================================================================
-Received Import Request.
-  Time since last request: 2.660952 seconds.
-  path: Assets/RusNumberLong 1.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong 1.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ded910354e3b3cce11f95cdcba9b2d') in 0.012304 seconds
-  Import took 0.014570 seconds .
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 38)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.013665 seconds.
-  path: Assets/RusNumberLong 1.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong 1.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ded910354e3b3cce11f95cdcba9b2d') in 0.005947 seconds
-  Import took 0.009023 seconds .
+GPGSUpgrader done
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:105)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-========================================================================
-Received Import Request.
-  Time since last request: 8.063972 seconds.
-  path: Assets/RusNumberOld.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberOld.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55db38d7ec1937627f4c741552df21bd') in 0.012481 seconds
-  Import took 0.014556 seconds .
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.009178 seconds.
-  path: Assets/RusNumberOld.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberOld.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55db38d7ec1937627f4c741552df21bd') in 0.006308 seconds
-  Import took 0.008070 seconds .
+Mono: successfully reloaded assembly
+- Completed reload, in  0.889 seconds
+Domain Reload Profiling:
+	ReloadAssembly (889ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (669ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (194ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (243ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (156ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 50.0 MB.
+System memory in use after: 50.1 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 24.908265 seconds.
-  path: Assets/RusNumberLong.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76854065bd4bcee52f523e64c24ba6d1') in 0.011903 seconds
-  Import took 0.013792 seconds .
+Unloading 70 unused Assets to reduce memory usage. Loaded Objects now: 1307.
+Total: 2.019800 ms (FindLiveObjects: 0.086000 ms CreateObjectMapping: 0.026900 ms MarkObjects: 1.881600 ms  DeleteObjects: 0.024500 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.008182 seconds.
-  path: Assets/RusNumberLong.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RusNumberLong.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76854065bd4bcee52f523e64c24ba6d1') in 0.007411 seconds
-  Import took 0.009731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.413240 seconds.
-  path: Assets/RU_Long.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Long.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a290d32ae902d8c2fa0508d103c758e') in 0.012176 seconds
-  Import took 0.014662 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013277 seconds.
-  path: Assets/RU_Long.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Long.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a290d32ae902d8c2fa0508d103c758e') in 0.007630 seconds
-  Import took 0.010413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.533503 seconds.
-  path: Assets/RU_Old.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Old.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460606a469f3faee4ac356029430cdca') in 0.013948 seconds
-  Import took 0.016564 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007003 seconds.
-  path: Assets/RU_Old.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Old.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460606a469f3faee4ac356029430cdca') in 0.006768 seconds
-  Import took 0.008704 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.296199 seconds.
-  path: Assets/RU_Short.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Short.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301dc5696518945c7258ee11ba237bed') in 0.012306 seconds
-  Import took 0.014653 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008511 seconds.
-  path: Assets/RU_Short.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Short.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301dc5696518945c7258ee11ba237bed') in 0.005843 seconds
-  Import took 0.007981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.032994 seconds.
-  path: Assets/UA_Plate.prefab
-  artifactKey: Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UA_Plate.prefab using Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764e2f1c9817ddfdea3dae4b1d9ece98') in 0.010641 seconds
-  Import took 0.012672 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.010134 seconds.
-  path: Assets/UA_Plate.prefab
-  artifactKey: Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UA_Plate.prefab using Guid(4399a48ba357c6041963c98981bb6d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764e2f1c9817ddfdea3dae4b1d9ece98') in 0.005546 seconds
-  Import took 0.007789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.897009 seconds.
-  path: Assets/RU_Plate_Long.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Long.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '006f817c8a4275fbaa1d4bca595ee9e1') in 0.013908 seconds
-  Import took 0.015812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008448 seconds.
-  path: Assets/RU_Plate_Long.prefab
-  artifactKey: Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Long.prefab using Guid(0cb5ac954d2843e41b20de10043ffc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '006f817c8a4275fbaa1d4bca595ee9e1') in 0.007074 seconds
-  Import took 0.009385 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.997680 seconds.
-  path: Assets/RU_Plate_Short.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Short.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b22408ace864e1785994d17c2f983c4') in 0.014277 seconds
-  Import took 0.016894 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006549 seconds.
-  path: Assets/RU_Plate_Short.prefab
-  artifactKey: Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Short.prefab using Guid(e491f24651739134f918e290b870bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b22408ace864e1785994d17c2f983c4') in 0.006171 seconds
-  Import took 0.008475 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.833597 seconds.
-  path: Assets/RU_Plate_Old.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Old.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3b5f2611824292ba6e2fba3cf29c24') in 0.014033 seconds
-  Import took 0.016648 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005806 seconds.
-  path: Assets/RU_Plate_Old.prefab
-  artifactKey: Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RU_Plate_Old.prefab using Guid(d13f39830d756804598f389162fb8f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3b5f2611824292ba6e2fba3cf29c24') in 0.006663 seconds
-  Import took 0.008587 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.393573 seconds.
-  path: Assets/RegionPrefab.prefab
-  artifactKey: Guid(e0fd5940ae3916e42bb0ce2155b22148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RegionPrefab.prefab using Guid(e0fd5940ae3916e42bb0ce2155b22148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b704cca015acbe93ef3fdb0f0816f339') in 0.016175 seconds
-  Import took 0.019390 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.016278 seconds.
-  path: Assets/RegionPrefab.prefab
-  artifactKey: Guid(e0fd5940ae3916e42bb0ce2155b22148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RegionPrefab.prefab using Guid(e0fd5940ae3916e42bb0ce2155b22148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b704cca015acbe93ef3fdb0f0816f339') in 0.004000 seconds
-  Import took 0.005735 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.224097 seconds.
-  path: Assets/Resources/Prefabs
-  artifactKey: Guid(8a148a812847ebb4a93549f17f5ea702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs using Guid(8a148a812847ebb4a93549f17f5ea702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebca7ec0cb43cc3376613d85320d61dc') in 0.010433 seconds
-  Import took 0.011999 seconds .
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

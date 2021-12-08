@@ -180,3 +180,12 @@ Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.ide.visualstudio from version 2.0.5 to 2.0.7
+
+=== Sun Oct 31 01:47:53 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ads from version 3.7.1 to 3.7.5
+  com.unity.ide.visualstudio from version 2.0.7 to 2.0.11
